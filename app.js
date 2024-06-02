@@ -1,18 +1,13 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 
-//Jsx ->babel transpiles it to react.createelement => reactelement->js objet -> htmlelement(render)
-const jsxHeading = (<h1 id="heading">Json is html like syntax</h1>)
 
+const Title = ()=>(<h1 id="heading">Json is html like syntax</h1>)
 
-// React component
-
-//React Functional component (a js function that return jsx(react element)) write componnet name in capital(first letter)
-// const HeadingComponent = ()=>{
-// return <h1>jsx returned</h1>
-// }
+//componet composition
 const HeadingComponent = () => (
     <div id="container">
+        <Title />
         <h1 className="heading">jsx returned</h1>
     </div>
 
