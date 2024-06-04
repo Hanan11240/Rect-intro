@@ -1,3 +1,44 @@
-#heading{
-    color: red;
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.logo{
+    width: 100px;
+}
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+
+}
+.nav-items > ul > li{
+    padding: 10px;
+    margin: 10px;   
+}
+
+.res-card{
+    width: 200px;
+
+    padding: 5px;
+    margin: 2px;
+    
+}
+.res-card:hover{
+    border: 2px solid rgb(88, 85, 85);
+    cursor: pointer;
+}
+
+.res-logo{
+    width: 100%;
+    object-fit: contain;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
 }
