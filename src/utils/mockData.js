@@ -20,9 +20,9 @@ const resData= [
           "Desserts",
           "Beverages"
         ],
-        "avgRating": 4.2,
+        "avgRating": 3.2,
         "parentId": "422576",
-        "avgRatingString": "4.2",
+        "avgRatingString": "3.2",
         "totalRatingsString": "1K+",
         "sla": {
           "deliveryTime": 23,
@@ -115,9 +115,9 @@ const resData= [
           "Keto",
           "Pastas"
         ],
-        "avgRating": 4.5,
+        "avgRating": 3.2,
         "parentId": "335529",
-        "avgRatingString": "4.5",
+        "avgRatingString": "3.2",
         "totalRatingsString": "100+",
         "sla": {
           "deliveryTime": 27,
@@ -216,10 +216,10 @@ const resData= [
           "Maharashtrian",
           "Sweets"
         ],
-        "avgRating": 4.4,
+        "avgRating": 3.6,
         "veg": true,
         "parentId": "319582",
-        "avgRatingString": "4.4",
+        "avgRatingString": "3.6",
         "totalRatingsString": "1K+",
         "sla": {
           "deliveryTime": 27,
@@ -331,9 +331,9 @@ const resData= [
           "Street Food",
           "Sweets"
         ],
-        "avgRating": 4.6,
+        "avgRating": 3,
         "parentId": "281782",
-        "avgRatingString": "4.6",
+        "avgRatingString": "3",
         "totalRatingsString": "1K+",
         "sla": {
           "deliveryTime": 32,

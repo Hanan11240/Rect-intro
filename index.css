@@ -42,3 +42,8 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.filter-btn{
+   padding: 5px; 
+   margin-top: 10px;
+}
