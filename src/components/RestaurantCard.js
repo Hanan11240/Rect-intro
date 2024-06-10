@@ -1,7 +1,7 @@
 import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => { // you can destructure {resName,cuisine}
     const {resData}  = props;
-    const {name,cuisines,avgRating,costForTwo} = resData?.info;
+    const {name,cuisines,avgRating,costForTwo,} = resData?.info;
     const { deliveryTime} = resData?.info?.sla
      return (
          <div className="res-card" style={{
