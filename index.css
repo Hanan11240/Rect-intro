@@ -58,3 +58,12 @@
     margin: 20px;
     border-radius: 15px;
 }
+.login{
+    padding: 0 5px;
+    cursor: pointer;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
