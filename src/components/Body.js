@@ -1,9 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
+import { Link } from "react-router-dom";
 const Body = () => {
     const [ListOfRestaurants, setListOfRestaurants] = useState([]);
-    const [filteredRestaurants,setFilteredRestaurants] = useState([]);
+    const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
     useEffect(() => {
         fetchData();
@@ -26,11 +27,11 @@ const Body = () => {
             <div className="filter">
                 <div className="search">
                     <input type="text" className="search-box" value={searchText} onChange={(e) => {
-                            setSearchText(e?.target?.value);
+                        setSearchText(e?.target?.value);
                     }} />
                     <button onClick={() => {
-                       const filteredList = ListOfRestaurants.filter((restaurant)=>restaurant?.info?.name?.toLowerCase().includes(searchText.toLowerCase()));
-                       setFilteredRestaurants(filteredList);
+                        const filteredList = ListOfRestaurants.filter((restaurant) => restaurant?.info?.name?.toLowerCase().includes(searchText.toLowerCase()));
+                        setFilteredRestaurants(filteredList);
                     }}>Search</button>
                 </div>
                 <button className="filter-btn"
@@ -42,7 +43,8 @@ const Body = () => {
                 >Top rated button</button>
             </div>
             <div className="res-container">
-                {filteredRestaurants.map((restaurant) => (<RestaurantCard key={restaurant?.info?.id} resData={restaurant} />))}
+                {/* key should be over parent jsx , so remove key form <Restaurant /> and add it it Link */}
+                {filteredRestaurants.map((restaurant) => (<Link to={"/restaurant/" + restaurant?.info?.id} key={restaurant?.info?.id}> <RestaurantCard resData={restaurant} />  </Link>))}
             </div>
         </div>
     )
