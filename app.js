@@ -1,26 +1,32 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from 'react-dom/client';
 import HeaderComponent from "./src/components/HeaderComponent";
 import Body from "./src/components/Body";
-import { createBrowserRouter ,RouterProvider,Outlet} from "react-router-dom";
-import About from "./src/components/About";
-import ContactUs from "./src/components/Contact";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+// import About from "./src/components/About";
+// import ContactUs from "./src/components/Contact";
 import Error from "./src/components/Error";
 import RestaurantMenu from "./src/components/RestaurantMenu";
+// import Grocery from "./src/components/Grocery";
 
 
 
 
 
-// dont use index as key 
+// chunking or
+// lazy loading or
+// dynamix bundling or
+// code splitting
 
-
+const Grocery = lazy(() => import("./src/components/Grocery"));
+const About = lazy(() => import("./src/components/About"));
+const ContactUs = lazy(() => import("./src/components/Contact"))
 const AppLayout = () => {
     return (
         <div className="app">
             <HeaderComponent />
-           <Outlet />
-            
+            <Outlet />
+
         </div>
     )
 }
@@ -28,26 +34,38 @@ const appRouter = createBrowserRouter([
     {
         path: '/',
         element: <AppLayout />,
-        children:[
+        children: [
             {
-                path:'/',
+                path: '/',
                 element: <Body />
             },
             {
                 path: '/about',
-                element: <About />
+                element: <Suspense fallback={<h1>Loading...</h1>}>
+                    <About />
+                    </Suspense>
+
             },
             {
-                path:'/contact-us',
-                element:<ContactUs />
-            },{
-                path:'/restaurant/:resId',
-                element:<RestaurantMenu />
+                path: '/contact-us',
+                element: <Suspense fallback={<h1>Loading...</h1>}>
+                    <ContactUs />
+                </Suspense>
+            },
+            {
+                path: '/grocery',
+                element: <Suspense fallback={<h1>Loading...</h1>}>
+                    <Grocery />
+                </Suspense>
+            },
+            {
+                path: '/restaurant/:resId',
+                element: <RestaurantMenu />
             }
         ],
-        errorElement:<Error />
+        errorElement: <Error />
     },
-    
+
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={appRouter} />);

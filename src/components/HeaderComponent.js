@@ -27,7 +27,10 @@ const HeaderComponent = () => {
                         <Link to="/about">About us</Link>
                     </li>
                     <li>
-                        <Link to="/contatect-us">Contact us</Link>
+                        <Link to="/contact-us">Contact us</Link>
+                    </li>
+                    <li>
+                        <Link to="/grocery">Grocery</Link>
                     </li>
                     <li>Cart</li>
                     <button onClick={() => {
