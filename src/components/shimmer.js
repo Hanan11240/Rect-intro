@@ -1,20 +1,20 @@
 const Shimmer = ()=>{
     return (
-        <div className="shimmer-container">
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
-            <div className="shimmer-card">Cards</div>
+        <div className="flex">
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
+            <div className="w-[200px] bg-slate-400">Cards</div>
         </div>
     );
 }

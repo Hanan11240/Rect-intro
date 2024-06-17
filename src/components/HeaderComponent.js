@@ -10,32 +10,32 @@ const HeaderComponent = () => {
         console.log("use Effect called");
     }, [buttonName])
     return (
-        <div className="header">
+        <div className="flex justify-between  bg-slate-300 shadow-lg lg:bg-gray-200">
             <div className="logo-container">
-                <img className="logo" src={LOGO_URL} />
+                <img className="w-56" src={LOGO_URL} />
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>
+            <div className="flex items-center ">
+                <ul className="flex p-4 m-4">
+                    <li className="px-3">
                         <Link to="/">
                             Home
                         </Link>
 
 
                     </li>
-                    <li>
+                    <li className="px-3">
                         <Link to="/about">About us</Link>
                     </li>
-                    <li>
+                    <li className="px-3">
                         <Link to="/contact-us">Contact us</Link>
                     </li>
-                    <li>
+                    <li className="px-3">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li>Cart</li>
+                    <li className="px-3">Cart</li>
                     <button onClick={() => {
                         buttonName === "Login" ? setButtonName('Logout') : setButtonName("Login");
-                    }} className="login">{buttonName}</button>
+                    }} className="bg-green-100 px-2 rounded-md">{buttonName}</button>
                 </ul>
             </div>
         </div>
