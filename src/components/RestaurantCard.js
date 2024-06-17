@@ -20,7 +20,7 @@ const RestaurantCard = (props) => { // you can destructure {resName,cuisine}
     return (props) =>{
         return (
             <div>
-                <label className="absolute bg-slate-800 text-white">Promoted</label>
+                <label className="absolute bg-slate-800 px-2 rounded text-white">Promoted</label>
                 <RestaurantCard {...props}/>
             </div>
         )

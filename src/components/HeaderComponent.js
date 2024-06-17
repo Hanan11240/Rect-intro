@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 const HeaderComponent = () => {
     const [buttonName, setButtonName] = useState("Login");
+    const {loggedInUser} = useContext(UserContext);
     // if no dependency array. useEffect is called on every render;
     // if dependency array is empty then useEffect is called on initial rendered;
     // if denpendency array is [buttonName] then useEffect will b called whenever buttonName changes;
@@ -36,6 +38,7 @@ const HeaderComponent = () => {
                     <button onClick={() => {
                         buttonName === "Login" ? setButtonName('Logout') : setButtonName("Login");
                     }} className="bg-green-100 px-2 rounded-md">{buttonName}</button>
+                    <li className="px-4 font-bold">{loggedInUser}</li>
                 </ul>
             </div>
         </div>
