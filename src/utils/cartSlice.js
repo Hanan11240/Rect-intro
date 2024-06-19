@@ -6,6 +6,7 @@ const cartSlice = createSlice({
         items:[]
     },
     reducers:{
+        // redux uses immer 
         addItem:(state,action)=>{
             state.items.push(action.payload);
         },
@@ -13,6 +14,7 @@ const cartSlice = createSlice({
             state.items.pop();
         },
         clearCart:(state,action)=>{
+            // return {items:[]}
             state.items.length = [];
         }
     }
