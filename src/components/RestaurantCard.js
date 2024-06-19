@@ -1,9 +1,9 @@
 import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => { // you can destructure {resName,cuisine}
     const {resData}  = props;
+    console.log(resData);
     const {name,cuisines,avgRating,costForTwo,} = resData?.info;
     const { deliveryTime} = resData?.info?.sla
-    console.log('restaurant')
      return (
          <div className="m-4 p-4 w-52 w-[220px] bg-gray-100 hover:bg-gray-200" >
              <img className="rounded-lg" src={CDN_URL + resData.info.cloudinaryImageId} alt="res-logo" />
