@@ -12,7 +12,6 @@ const HeaderComponent = () => {
     // if dependency array is empty then useEffect is called on initial rendered;
     // if denpendency array is [buttonName] then useEffect will b called whenever buttonName changes;
     useEffect(() => {
-        console.log("use Effect called");
     }, [buttonName])
     return (
         <div className="flex justify-between  bg-slate-300 shadow-lg lg:bg-gray-200">

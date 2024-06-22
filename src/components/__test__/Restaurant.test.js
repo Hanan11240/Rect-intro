@@ -11,6 +11,6 @@ it("should render Restaurant card component with props data",()=>{
     expect(resName).toBeInTheDocument();
 });
 
-it("should render Restaurant Card component with Promoted Label",()=>{
-    // withPromotedLabel
-});
+// it("should render Restaurant Card component with Promoted Label",()=>{
+//     // withPromotedLabel
+// });

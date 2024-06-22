@@ -8,7 +8,6 @@ const MenuList = (props) => {
            
             dispatch(addItem(item))
         }
-    console.log(items)
     return (
         <div>
 
